@@ -23,7 +23,7 @@ font pango:Hack Nerd Font 0
 for_window [class=".*"] border pixel 0
 
 # add picon compositor
-exec --no-startup-id picom
+exec --no-startup-id picom --experimental-backends
 
 # Add Tapping and Natural Scrolling in Touchpad
 exec --no-startup-id xinput set-prop "DLL077C:00 06CB:7E92 Touchpad" "libinput Tapping Enabled" 1
@@ -157,7 +157,7 @@ bindsym $mod+n exec --no-startup-id alacritty -e nvim
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
+# focus the parent chntainer
 bindsym $mod+p focus parent
 
 # focus the child container
@@ -260,7 +260,7 @@ bindsym $mod+F7 mode "sct: [d]efault, [m]id, [h]igh"
 
 
 # Adding gap
-gaps inner 5
+gaps inner 10
 gaps outer 0
 
 ###Color variables
@@ -273,6 +273,7 @@ set $grey #A2A2A2
 set $white #ffffff
 set $black #000000
 set $dark-blue #1C639A
+set $light-blue #82b2ff
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -302,7 +303,7 @@ urgent_workspace #000000 #ffffff #000000
 
 ###Window colors  
 ###Fields: identifier border background text indicator
-client.focused  $bg-color $dark-blue $text-color $dark-blue
+client.focused  $bg-color $light-blue $text-color $dark-blue
 client.unfocused  $inactive-bg-color $inactive-bg-color $white $grey
 client.focused_inactive  $inactive-bg-color $inactive-bg-color $inactive-text-color $grey 
 client.urgent  $urgent-bg-color $urgent-bg-color $text-color $grey 
