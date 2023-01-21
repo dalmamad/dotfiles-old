@@ -36,9 +36,9 @@ nvim_tree.setup({
   remove_keymaps = false,
   select_prompts = false,
   view = {
-    adaptive_size = true,
+    adaptive_size = false,
     centralize_selection = false,
-    width = 20,
+    width = 25,
     hide_root_folder = false,
     side = "left",
     preserve_window_proportions = false,
@@ -62,10 +62,9 @@ nvim_tree.setup({
         { key = "ra", cb = tree_cb("rename") },
         { key = "rn", cb = tree_cb("full_rename") },
         { key = "af", cb = tree_cb("create") },
-        -- { key = "ad", cb = tree_cb "create_dir" },
+        { key = "ad", cb = tree_cb "create_dir" },
         -- { key = "v", cb = tree_cb "vsplit" },
         -- { key = "s", cb = tree_cb "split" },
-        -- { key = "o", cb = tree_cb "system_open" },
       },
     },
     float = {
@@ -171,7 +170,7 @@ nvim_tree.setup({
     },
   },
   filters = {
-    dotfiles = false,
+    dotfiles = true,
     git_clean = false,
     no_buffer = false,
     custom = {},

@@ -1,5 +1,5 @@
-vim.o.winwidth = 10
-vim.o.winminwidth = 10
+vim.o.winwidth = 2
+vim.o.winminwidth = 2
 vim.o.equalalways = false
 require("windows").setup({
   autowidth = { --		       |windows.autowidth|
@@ -14,7 +14,7 @@ require("windows").setup({
     filetype = { "NvimTree", "neo-tree", "undotree", "gundo" },
   },
   animation = {
-    enable = true,
+    enable = false,
     duration = 300,
     fps = 30,
     easing = "in_out_sine",

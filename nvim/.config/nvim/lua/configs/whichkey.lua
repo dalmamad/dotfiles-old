@@ -46,7 +46,7 @@ local setup = {
     scroll_up = "<c-u>", -- binding to scroll up inside the popup
   },
   window = {
-    border = "none", -- none, single, double, shadow
+    border = "rounded", -- none, single, double, shadow, rounded
     position = "bottom", -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
@@ -99,7 +99,6 @@ local mappings_1 = {
   ["w"] = { "<cmd>update<CR>", "Save" },
   ["q"] = { "<cmd>q<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-  ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
   f = {
@@ -198,6 +197,7 @@ local opts_2 = {
 local mappings_2 = {
   ["s"] = { "<cmd>source %<cr>", "Source" },
   ["m"] = { "<cmd>Mason<cr> ", "Mason" },
+  ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },

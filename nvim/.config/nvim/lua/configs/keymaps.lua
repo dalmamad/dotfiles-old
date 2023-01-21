@@ -1,6 +1,6 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -12,6 +12,7 @@ local keymap = vim.api.nvim_set_keymap
 
 --Remap "," as leader key
 vim.g.mapleader = ","
+
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -33,13 +34,21 @@ keymap("n", "<CA-j>", ":resize +2<CR>", opts)
 keymap("n", "<CA-h>", ":vertical resize -2<CR>", opts)
 keymap("n", "<CA-l>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==", opts)
+
+-- Center the line
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+keymap("n", "<C-d>", "<C-d>zzzv", opts)
+keymap("n", "<C-u>", "<C-u>zzzv", opts)
+
+-- Turn off Highlight
+keymap("n","<Esc>","<cmd>nohlsearch<CR>", opts)
+
+-- Paste last yank
+keymap("n","P","\"0p", opts)
 
 -- Better indent
 -- keymap("n", ">", ">>", opts)
@@ -72,6 +81,9 @@ keymap("x", "J", ":move '>+1<CR>gv=gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv=gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv=gv", opts)
+
+-- Stop yanking selected text
+keymap("x", "p", "P", opts)
 
 -- Terminal --
 -- Press <Esc> to exit terminal mode

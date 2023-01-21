@@ -10,7 +10,7 @@ dashboard.section.header.val = {
 }
 -- fasdf  fasdf    asdf  asdf  asdf
 dashboard.section.buttons.val = {
-  dashboard.button("f", "   Find file", ":Telescope find_files<CR>"),
+  dashboard.button("f", "   Find file", ":Telescope find_files<CR> | cd %:h<cr>"),
   dashboard.button("p", "   Projects", ":Telescope projects<CR>"),
   dashboard.button("r", "   Recent", ":Telescope oldfiles<CR>"),
   dashboard.button("s", "   Settings", ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR> | <cmd>NvimTreeToggle<cr>"),

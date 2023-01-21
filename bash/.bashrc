@@ -135,3 +135,5 @@ export EDITOR="nvim"
 setxkbmap us,ir -option "lv3:ralt_alt,grp:alt_shift_toggle"
 # Changing left alt with super key (it must be after adding farsi)
 setxkbmap -option altwin:swap_lalt_lwin
+# changing Capslock with Esc
+setxkbmap -option caps:swapescape

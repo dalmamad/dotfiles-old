@@ -1,7 +1,15 @@
 require("debugprint").setup({
-    -- create_keymaps = false,
-    -- create_commands = false
+  move_to_debugline = true,
+  create_keymaps = false,
+  create_commands = false
 })
+
+vim.keymap.set("n", "<Leader>d", function()
+  -- Note: setting `expr=true` and returning the value are essential
+  return require('debugprint').debugprint({})
+end, {
+    expr = true,
+  })
 
 -- vim.keymap.set("n", "g?d", function()
 --   require("debugprint").deleteprints()

@@ -62,7 +62,7 @@ return packer.startup(function(use)
   use({ "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" })
   use({
     "akinsho/bufferline.nvim",
-    commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353",
+    commit = "c7492a76ce8218e3335f027af44930576b561013",
     config = function()
       require("configs.bufferline")
     end,
@@ -192,8 +192,8 @@ return packer.startup(function(use)
 
   -- File Explorer
   use({
-    "nvim-tree/nvim-tree.lua",
-    commit = "e14c2895b4f36a22001f7773244041c173dcf867",
+    "dalmamad/nvim-tree.lua",
+    commit = "fcdec7d186aee8ed39ef79c87666c1401f6a4d48",
     -- requires = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("configs.nvim-tree")
@@ -244,9 +244,10 @@ return packer.startup(function(use)
     end,
   })
 
-  --Print
+  --Debug
   use({
-    "andrewferrier/debugprint.nvim",
+    "dalmamad/debugprint.nvim",
+    branch = 'dalmamad',
     config = function()
       require("configs.debugprint")
     end,
@@ -264,19 +265,23 @@ return packer.startup(function(use)
     end,
   })
 
-  use("eandrju/cellular-automaton.nvim")
-  use("alec-gibson/nvim-tetris")
-  use("ggandor/lightspeed.nvim")
+  -- Motions
   use({
     "phaazon/hop.nvim",
     branch = "v2", -- optional but strongly recommended
     config = function()
-      -- you can configure Hop the way you like here; see :h hop-config
-      require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+      require("configs.hop")
     end,
   })
+
+  -- temp
+  -- use { "nvim-telescope/telescope-file-browser.nvim" }
+  -- use("eandrju/cellular-automaton.nvim")
+  -- use("alec-gibson/nvim-tetris")
+  -- use("ggandor/lightspeed.nvim")
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

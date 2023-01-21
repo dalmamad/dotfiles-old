@@ -1,7 +1,11 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/mohamad/.dotfiles
+- /home/mohamad/.local/share/nvim/site/pack/packer/start/debugprint.nvim
+- /home/mohamad/.local/share/nvim/site/pack/packer/start/toggleterm.nvim
+- /home/mohamad/code/boilerplate/chat-app
+- /home/mohamad/code/fighter-game
 - /home/mohamad/code/snake-game-py
-- /home/mohamad/snake-game-py
 - /home/mohamad/code/versland
 startuppopupversion: 5
 customcommandshistory: []
