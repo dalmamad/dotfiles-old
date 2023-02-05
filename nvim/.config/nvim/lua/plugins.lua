@@ -222,19 +222,19 @@ return packer.startup(function(use)
       require("configs.todo-comments")
     end,
   })
-  use({
-    "nvim-neorg/neorg",
-    run = ":Neorg sync-parsers", -- This is the important bit!
-    config = function()
-      require("configs.neorg")
-    end,
-  })
-  use({
-    "epwalsh/obsidian.nvim",
-    config = function()
-      require("configs.obsidian")
-    end,
-  })
+  -- use({
+  --   "nvim-neorg/neorg",
+  --   run = ":Neorg sync-parsers", -- This is the important bit!
+  --   config = function()
+  --     require("configs.neorg")
+  --   end,
+  -- })
+  -- use({
+  --   "epwalsh/obsidian.nvim",
+  --   config = function()
+  --     require("configs.obsidian")
+  --   end,
+  -- })
 
   -- Notify
   use({
