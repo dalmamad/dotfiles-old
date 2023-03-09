@@ -48,8 +48,12 @@ keymap("n", "<C-u>", "<C-u>zzzv", opts)
 keymap("n","<Esc>","<cmd>nohlsearch<CR>", opts)
 
 -- Paste last yank
-keymap("n","<space>p","\"0p", opts)
-keymap("n","<space>P","\"0P", opts)
+keymap("n","<space>p","\"0p==", opts)
+keymap("n","<space>P","\"0P==", opts)
+
+-- Paste indent
+keymap("n","p","p==", opts)
+keymap("n","P","P==", opts)
 
 -- Better indent
 -- keymap("n", ">", ">>", opts)

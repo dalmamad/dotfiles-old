@@ -17,6 +17,7 @@ window.dynamic_title: true
 font:
   normal:
     family: Hack Nerd Font Mono
+    # family: notosansmono nerd font
     style: Regular
   bold:
     family: Hack Nerd Font Mono

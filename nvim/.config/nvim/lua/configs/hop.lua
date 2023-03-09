@@ -1,7 +1,8 @@
-require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+require("hop").setup({ keys = "eiasldkfjruwomcxnqphgvtbyz" })
 
 vim.keymap.set("n", "s", "<cmd>HopChar2<cr>", { noremap = true, silent = true })
 vim.keymap.set("v", "s", "<cmd>HopChar2<cr>", { noremap = true, silent = true })
+
 
 -- local hop = require('hop')
 -- local directions = require('hop.hint').HintDirection

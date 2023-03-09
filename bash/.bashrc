@@ -100,6 +100,7 @@ alias ra='ranger'
 alias py='python3'
 alias x='exit'
 alias btl='bluetoothctl'
+alias wl='nmcli dev wifi list'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -132,8 +133,9 @@ LS_COLORS=$LS_COLORS:'ow=0;35;40:' ; export LS_COLORS
 export EDITOR="nvim"
 
 # Adding farsi
-setxkbmap us,ir -option "lv3:ralt_alt,grp:alt_shift_toggle"
+# setxkbmap us,ir -option "lv3:ralt_alt,grp:alt_shift_toggle"
 # Changing left alt with super key (it must be after adding farsi)
-setxkbmap -option altwin:swap_lalt_lwin
+# setxkbmap -option altwin:swap_lalt_lwin
 # changing Capslock with Esc
-setxkbmap -option caps:swapescape
+# setxkbmap -option caps:swapescape
+. "$HOME/.cargo/env"

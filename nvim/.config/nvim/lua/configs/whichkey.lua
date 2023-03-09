@@ -110,10 +110,11 @@ local mappings_1 = {
     g = { "<cmd>Telescope live_grep theme=ivy<cr>", "live grep" },
     t = { "<cmd>TodoTelescope <cr>", "Todos" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+    p = { "<cmd>Telescope projects<CR>", "Projects" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
@@ -133,8 +134,8 @@ local mappings_1 = {
       "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
       "Undo Stage Hunk",
     },
-    o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+    O = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+    B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
     C = { "<cmd>GitConflictListQf<cr>", "List conflicts" },
     d = {
@@ -196,6 +197,7 @@ local opts_2 = {
 
 local mappings_2 = {
   ["s"] = { "<cmd>source %<cr>", "Source" },
+  ["S"] = { "<cmd>:e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR> | <cmd>NvimTreeToggle<cr><cr>", "Settings" },
   ["m"] = { "<cmd>Mason<cr> ", "Mason" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   p = {

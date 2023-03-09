@@ -10,10 +10,10 @@ require('git-conflict').setup(
   }
 )
 
-vim.keymap.set('n', 'co', '<Plug>(git-conflict-ours)')
-vim.keymap.set('n', 'ct', '<Plug>(git-conflict-theirs)')
-vim.keymap.set('n', 'cb', '<Plug>(git-conflict-both)')
-vim.keymap.set('n', 'c0', '<Plug>(git-conflict-none)')
+vim.keymap.set('n', '<leader>go', '<Plug>(git-conflict-ours)')
+vim.keymap.set('n', '<leader>gt', '<Plug>(git-conflict-theirs)')
+vim.keymap.set('n', '<leader>gb', '<Plug>(git-conflict-both)')
+vim.keymap.set('n', '<leader>g0', '<Plug>(git-conflict-none)')
 vim.keymap.set('n', ']c', '<Plug>(git-conflict-prev-conflict)')
 vim.keymap.set('n', '[c', '<Plug>(git-conflict-next-conflict)')
 

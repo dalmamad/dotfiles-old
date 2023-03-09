@@ -5,4 +5,7 @@ setxkbmap -option 'grp:shifts_toggle'
 # Changing left alt with super key (it must be after adding farsi)
 setxkbmap -option altwin:swap_lalt_lwin
 # changing Capslock with Esc
-setxkbmap -option caps:swapescape
+# setxkbmap -option caps:swapescape
+
+setxkbmap -option ctrl:nocaps
+xcape -e 'Control_L=Escape'

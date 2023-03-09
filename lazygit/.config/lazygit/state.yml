@@ -1,12 +1,11 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/mohamad/.dotfiles
-- /home/mohamad/code/versland
-- /home/mohamad/.local/share/nvim/site/pack/packer/start/debugprint.nvim
-- /home/mohamad/.local/share/nvim/site/pack/packer/start/toggleterm.nvim
-- /home/mohamad/code/boilerplate/chat-app
-- /home/mohamad/code/fighter-game
-- /home/mohamad/code/snake-game-py
+- /home/mamad/code/xx
+- /home/mamad/code/tschat
+- /home/mamad/code/boilerplate2/chat-app
+- /home/mamad/code/ff
+- /home/mamad/code/versland
+- /home/mamad/.dotfiles
 startuppopupversion: 5
 customcommandshistory: []
-hidecommandlog: true
+hidecommandlog: false

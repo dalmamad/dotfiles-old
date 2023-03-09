@@ -14,9 +14,10 @@ local async_formatting = function(bufnr)
       end
 
       -- don't apply results if buffer is unloaded or has been modified
-      if not vim.api.nvim_buf_is_loaded(bufnr) or vim.api.nvim_buf_get_option(bufnr, "modified") then
-        return
-      end
+      -- uncomment it if you wanted format on write
+      -- if not vim.api.nvim_buf_is_loaded(bufnr) or vim.api.nvim_buf_get_option(bufnr, "modified") then
+      --   return
+      -- end
 
       if res then
         local client = vim.lsp.get_client_by_id(ctx.client_id)
@@ -38,26 +39,40 @@ local diagnostics = null_ls.builtins.diagnostics
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
+local format = true
 null_ls.setup({
   sources = {
-    -- formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+    formatting.prettier.with({ extra_args = {} }),
     formatting.black.with({ extra_args = { "--fast" } }),
+    diagnostics.eslint_d,
     -- formatting.stylua,
     -- diagnostics.flake8,
     -- diagnostics.selene,
-    -- diagnostics.eslint_d,
   },
   debug = false,
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+      -- Format on write
       vim.api.nvim_create_autocmd("BufWritePost", {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          async_formatting(bufnr)
+          if format then
+            async_formatting(bufnr)
+          end
         end,
       })
     end
   end,
 })
+local function toggle_auto_format()
+  if format == false then
+    format = true
+  else
+    format = false
+  end
+end
+local opts = { noremap = true, silent = true }
+vim.keymap.set("n", "<leader>F", toggle_auto_format, opts)
+-- vim.keymap.set("n", "<leader>F", async_formatting, opts)

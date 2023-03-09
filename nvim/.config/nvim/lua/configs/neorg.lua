@@ -4,7 +4,7 @@ require("neorg").setup({
     ["core.norg.dirman"] = {
       config = {
         workspaces = {
-          home = "~/notes/home",
+          home = "~/notes/code/",
         },
       },
     },
@@ -23,6 +23,8 @@ require("neorg").setup({
     ["core.fs"] = {
       config = {},
     },
+    ["core.integrations.telescope"] = {},
+    ["core.export"] = {}
   },
 })
 

@@ -1,5 +1,5 @@
 local fn = vim.fn
--- Automatically install packer
+-- Automatically install packerplug
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system({
@@ -47,7 +47,6 @@ return packer.startup(function(use)
   use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
   use({
     "akinsho/toggleterm.nvim",
-    commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8",
     config = function()
       require("configs.toggleterm")
     end,
@@ -222,6 +221,7 @@ return packer.startup(function(use)
       require("configs.todo-comments")
     end,
   })
+
   -- use({
   --   "nvim-neorg/neorg",
   --   run = ":Neorg sync-parsers", -- This is the important bit!
@@ -229,20 +229,22 @@ return packer.startup(function(use)
   --     require("configs.neorg")
   --   end,
   -- })
-  -- use({
-  --   "epwalsh/obsidian.nvim",
-  --   config = function()
-  --     require("configs.obsidian")
-  --   end,
-  -- })
+  -- use {"nvim-neorg/neorg-telescope"}
 
-  -- Notify
   use({
-    "rcarriga/nvim-notify",
+    "epwalsh/obsidian.nvim",
     config = function()
-      require("configs.notify")
+      require("configs.obsidian")
     end,
   })
+
+  -- Notify
+  -- use({
+  --   "rcarriga/nvim-notify",
+  --   config = function()
+  --     require("configs.notify")
+  --   end,
+  -- })
 
   --Debug
   use({
@@ -273,6 +275,21 @@ return packer.startup(function(use)
       require("configs.hop")
     end,
   })
+
+  -- Rest
+  use {
+  "rest-nvim/rest.nvim",
+  requires = { "nvim-lua/plenary.nvim" },
+  config = function()
+      require("configs.rest")
+  end
+}
+
+  -- Sudo
+  use({
+    "lambdalisue/suda.vim",
+  })
+
 
   -- temp
   -- use { "nvim-telescope/telescope-file-browser.nvim" }

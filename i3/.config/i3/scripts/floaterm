@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+floaterm_win=$(xdotool search --name floater)
+
+if [ -z $floaterm_win ]
+then
+  alacritty -o font.size=8 -t floaterm &
+  sleep 0.2
+  i3-msg [title="floaterm"] scratchpad show
+  i3-msg [title="floaterm"] move position center
+else
+  i3-msg [title="floaterm"] scratchpad show
+  i3-msg [title="floaterm"] move position center
+fi
+
+

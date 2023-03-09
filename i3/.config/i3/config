@@ -29,11 +29,15 @@ font pango:Hack Nerd Font 0
 set $mod Mod4
 
 
-# add picon compositor
-exec --no-startup-id picom --experimental-backends
+# add picom compositor
+# exec --no-startup-id picom --experimental-backends
+exec --no-startup-id picom
 
 # polybar
 exec --no-startup-id polybar
+
+# notify on low battery
+exec --no-startup-id /home/$USER/.config/i3/scripts/i3-battery-popup
 
 # Add Natural Scrolling in Touchpad
 exec --no-startup-id xinput set-prop "DLL077C:00 06CB:7E92 Touchpad" "libinput Natural Scrolling Enabled" 1
@@ -58,7 +62,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -87,7 +91,7 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 0
+# new_window pixel 0
 
 # thin borders
 # hide_edge_borders both
@@ -106,8 +110,8 @@ gaps outer 3
 floating_modifier $mod
 
 # switch/iterate between workspaces
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
+# bindsym $mod+Tab workspace next
+# bindsym $mod+Shift+Tab workspace prev
 
 # switch to workspace
 bindsym $mod+1    workspace  $ws1
@@ -222,7 +226,7 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
 # exit-menu
-bindsym $mod+Shift+x exec ~/.config/i3/scripts/powermenu
+bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/scripts/powermenu
 
 # change screen temprature
 exec --no-startup-id sct 4000, mode "default"
@@ -233,7 +237,7 @@ mode "sct: [d]efault, [m]id, [h]igh" {
   bindsym Escape mode "default"
   bindsym Return mode "default"
 }
-bindsym $mod+F7 mode "sct: [d]efault, [m]id, [h]igh"
+bindsym $mod+F10 mode "sct: [d]efault, [m]id, [h]igh"
 
 ######################################
 # keybindings for different actions: #
@@ -242,9 +246,12 @@ bindsym $mod+F7 mode "sct: [d]efault, [m]id, [h]igh"
 # start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty -o font.size=8
 
-#floaterm
-bindsym $mod+t [title="floaterm"] scratchpad show; [title="floaterm"] move position center
-bindsym $mod+shift+t exec --no-startup-id alacritty -o font.size=8 -t floaterm 
+# floaterm
+bindsym $mod+t exec --no-startup-id /home/$USER/.config/i3/scripts/floaterm
+
+#safenet
+bindsym $mod+F1 [class="safenet"] scratchpad show; [class="safenet"] move position center
+
 
 # kill focused window
 bindsym $mod+shift+q kill
@@ -269,8 +276,8 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +5
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -5
 
 # change focus
 bindsym $mod+h focus left
@@ -311,10 +318,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+m floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Tab focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -346,13 +353,23 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+o exec --no-startup-id brave-browser-dev
+bindsym $mod+o exec --no-startup-id brave
 bindsym $mod+i exec --no-startup-id /usr/bin/thunar
 bindsym $mod+n exec --no-startup-id alacritty  -o font.size=8 -e nvim
-bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+
+# Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)" && notify-send "Capture saved to ~/Pictures"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)" && notify-send "Capture saved to ~/Pictures"
+bindsym Shift+Print exec --no-startup-id flameshot gui
+# bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+## Clipboard Screenshots
+# bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+# bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+# bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # Power Profiles menu switcher (rofi)
-bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
+bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
 
 ##########################################
 # configuration for workspace behaviour: #
@@ -458,7 +475,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /home/mamad/Pictures/Wallpapers/de85sza-a49b9a6b-2128-4874-a1d2-65024866810f.jpg
+exec --no-startup-id sleep 1 && feh --bg-fill /home/mamad/Pictures/wallpaper/justin-san-souci-apriceofsalt-wide-split-night-a-sky.jpg
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -506,7 +523,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 #exec --no-startup-id xfce4-clipman
 
 ##################
-# floating rules #
+# window rules #
 ##################
 
 # set floating (nontiling) for apps needing it
@@ -523,12 +540,26 @@ for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enabl
 for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
 
+# border 0 for all windows
+for_window [class="^.*"] border pixel 0
+
+# auto layout
+# for_window [class="^.*"] exec --no-startup-id /home/$USER/.config/i3/scripts/auto-layout
+
 # set border of floating window
-for_window [class="urxvt"] border pixel 0
+# for_window [class="urxvt"] border pixel 0
+
+# safenet
+for_window [class="safenet"] floating Enable
+for_window [class="safenet"] move scratchpad
+for_window [class="safenet"] scratchpad show
+for_window [class="safenet"] move position center
+
+
 
 # Floating terminal
 for_window [title="floaterm"] floating Enabled
-for_window [title="floaterm"] border pixel 0
+# for_window [title="floaterm"] border pixel 10
 for_window [title="floaterm"] move scratchpad
 for_window [title="floaterm"] resize set 1200 600
 exec --no-startup-id alacritty -o font.size=8 -t floaterm
@@ -669,7 +700,7 @@ client.urgent  $urgent-bg-color $urgent-bg-color $text-color $grey
 
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
-bindsym $mod+d exec rofi -modi drun -show drun \
+bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun \
 		-config ~/.config/rofi/rofidmenu.rasi
 
 # bindsym F9 exec rofi -modi drun -show drun \
