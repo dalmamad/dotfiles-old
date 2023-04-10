@@ -222,14 +222,14 @@ return packer.startup(function(use)
     end,
   })
 
-  -- use({
-  --   "nvim-neorg/neorg",
-  --   run = ":Neorg sync-parsers", -- This is the important bit!
-  --   config = function()
-  --     require("configs.neorg")
-  --   end,
-  -- })
-  -- use {"nvim-neorg/neorg-telescope"}
+  use({
+    "nvim-neorg/neorg",
+    run = ":Neorg sync-parsers", -- This is the important bit!
+    config = function()
+      require("configs.neorg")
+    end,
+  })
+  use {"nvim-neorg/neorg-telescope"}
 
   use({
     "epwalsh/obsidian.nvim",
@@ -290,6 +290,11 @@ return packer.startup(function(use)
     "lambdalisue/suda.vim",
   })
 
+
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
 
   -- temp
   -- use { "nvim-telescope/telescope-file-browser.nvim" }

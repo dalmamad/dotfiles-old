@@ -32,7 +32,8 @@ set $mod Mod4
 # add picom compositor
 # exec --no-startup-id picom --experimental-backends
 exec --no-startup-id picom
-
+#mouse speed
+exec --no-startup-id xinput --set-prop 12 'libinput Accel Speed' -0.9
 # polybar
 exec --no-startup-id polybar
 
@@ -207,7 +208,7 @@ mode "resize" {
 	bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+# bindsym $mod+r mode "resize"
 
 # Also for resize
 bindsym $mod+Control+h resize shrink width 10 px or 10 ppt
@@ -215,24 +216,25 @@ bindsym $mod+Control+j resize grow height 10 px or 10 ppt
 bindsym $mod+Control+k resize shrink height 10 px or 10 ppt
 bindsym $mod+Control+l resize grow width 10 px or 10 ppt
 
-mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
+mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend" {
   bindsym l exec i3-msg exit
   bindsym r exec systemctl reboot
   bindsym s exec systemctl poweroff
+  bindsym u exec --no-startup-id systemctl suspend, mode "default"
   bindsym Escape mode "default"
   # bindsym o mode "default"
   # bindsym Return mode "default"
 }
-bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown"
+bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend"
 
 # exit-menu
 bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/scripts/powermenu
 
 # change screen temprature
-exec --no-startup-id sct 4000, mode "default"
+exec --no-startup-id sct 4500, mode "default"
 mode "sct: [d]efault, [m]id, [h]igh" {
   bindsym d exec --no-startup-id sct, mode "default"
-  bindsym m exec --no-startup-id sct 4000, mode "default"
+  bindsym m exec --no-startup-id sct 4500, mode "default"
   bindsym h exec --no-startup-id sct 3000, mode "default"
   bindsym Escape mode "default"
   bindsym Return mode "default"
@@ -244,10 +246,13 @@ bindsym $mod+F10 mode "sct: [d]efault, [m]id, [h]igh"
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty -o font.size=8
+bindsym $mod+Return exec --no-startup-id alacritty -o font.size=10
 
 # floaterm
 bindsym $mod+t exec --no-startup-id /home/$USER/.config/i3/scripts/floaterm
+
+# rest-api
+bindsym $mod+r exec --no-startup-id /home/$USER/.config/i3/scripts/rest-api
 
 #safenet
 bindsym $mod+F1 [class="safenet"] scratchpad show; [class="safenet"] move position center
@@ -335,12 +340,12 @@ bindsym $mod+Shift+n exec --no-startup-id ~/.config/i3/scripts/empty_workspace
 # Multimedia Keys
 
 # volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+# bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
 
 # gradular volume control
-bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
-bindsym $mod+XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
+bindsym $mod+F6 exec --no-startup-id amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
+bindsym $mod+F5 exec --no-startup-id amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle && killall -USR1 i3blocks
 
 # audio control
@@ -355,7 +360,7 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 ## App shortcuts
 bindsym $mod+o exec --no-startup-id brave
 bindsym $mod+i exec --no-startup-id /usr/bin/thunar
-bindsym $mod+n exec --no-startup-id alacritty  -o font.size=8 -e nvim
+bindsym $mod+n exec --no-startup-id alacritty  -o font.size=10 -e nvim
 
 # Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)" && notify-send "Capture saved to ~/Pictures"
@@ -475,7 +480,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /home/mamad/Pictures/wallpaper/justin-san-souci-apriceofsalt-wide-split-night-a-sky.jpg
+exec --no-startup-id sleep 1 && feh --bg-fill /home/mamad/Pictures/alena-aenami-serenity-1k.jpg
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -559,10 +564,15 @@ for_window [class="safenet"] move position center
 
 # Floating terminal
 for_window [title="floaterm"] floating Enabled
-# for_window [title="floaterm"] border pixel 10
+# for_window [title="floaterm"] border pixel 3
 for_window [title="floaterm"] move scratchpad
 for_window [title="floaterm"] resize set 1200 600
-exec --no-startup-id alacritty -o font.size=8 -t floaterm
+
+# rest-api terminal
+for_window [title="rest-api"] floating Enabled
+# for_window [title="rest"] border pixel 4
+for_window [title="rest-api"] move scratchpad
+for_window [title="rest-api"] resize set 1200 600
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
