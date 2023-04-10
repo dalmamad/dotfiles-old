@@ -215,15 +215,15 @@ bindsym $mod+Control+j resize grow height 10 px or 10 ppt
 bindsym $mod+Control+k resize shrink height 10 px or 10 ppt
 bindsym $mod+Control+l resize grow width 10 px or 10 ppt
 
-mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
+mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend" {
   bindsym l exec i3-msg exit
   bindsym r exec systemctl reboot
   bindsym s exec systemctl poweroff
+  bindsym u exec systemctl suspend ,mode "default"
   bindsym Escape mode "default"
-  # bindsym o mode "default"
-  # bindsym Return mode "default"
+  bindsym Return mode "default"
 }
-bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown"
+bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend"
 
 # exit-menu
 bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/scripts/powermenu

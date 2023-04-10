@@ -109,6 +109,11 @@ require("lspconfig")["sumneko_lua"].setup({
 require("lspconfig")["tsserver"].setup({
   on_attach = on_attach,
   flags = lsp_flags,
+  init_options = {
+        preferences = {
+            disableSuggestions = false,
+        },
+    },
 })
 require("lspconfig")["rust_analyzer"].setup({
   on_attach = on_attach,

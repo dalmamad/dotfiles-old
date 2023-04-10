@@ -99,8 +99,16 @@ alias nv='nvim'
 alias ra='ranger'
 alias py='python3'
 alias x='exit'
+
 alias btl='bluetoothctl'
 alias wl='nmcli dev wifi list'
+
+alias dev='npm run dev'
+
+alias gtl='git log --oneline'
+alias gtg='git log --graph --abbrev-commit --decorate --oneline'
+
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

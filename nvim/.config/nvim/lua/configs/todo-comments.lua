@@ -11,6 +11,7 @@ require('todo-comments').setup {
     },
     TODO = { icon = " ", color = "info" },
     HACK = { icon = " ", color = "warning" },
+    CHECK = { icon = "󰡖", color = "info" },
     WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
     PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
     NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
@@ -44,8 +45,8 @@ require('todo-comments').setup {
     warning = { "DiagnosticWarning", "WarningMsg", "#FBBF24" },
     info = { "DiagnosticInfo", "#2563EB" },
     hint = { "DiagnosticHint", "#10B981" },
+    test = { "Identifier", "#FF00FF" },
     default = { "Identifier", "#7C3AED" },
-    test = { "Identifier", "#FF00FF" }
   },
   search = {
     command = "rg",
