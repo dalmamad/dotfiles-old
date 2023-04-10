@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+rest_win=$(xdotool search --name rest)
+if [ -z $rest_win ]
+then
+  alacritty -o font.size=10 -t rest-api -e nvim /home/$USER/rest-api &
+  sleep 0.2
+  i3-msg [title="rest-api"] scratchpad show
+  i3-msg [title="rest-api"] move position center
+else
+  i3-msg [title="rest-api"] scratchpad show
+  i3-msg [title="rest-api"] move position center
+fi
+
+

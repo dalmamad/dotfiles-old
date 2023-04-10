@@ -4,7 +4,7 @@ floaterm_win=$(xdotool search --name floater)
 
 if [ -z $floaterm_win ]
 then
-  alacritty -o font.size=8 -t floaterm &
+  alacritty -o font.size=10 -t floaterm &
   sleep 0.2
   i3-msg [title="floaterm"] scratchpad show
   i3-msg [title="floaterm"] move position center

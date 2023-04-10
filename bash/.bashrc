@@ -146,4 +146,3 @@ export EDITOR="nvim"
 # setxkbmap -option altwin:swap_lalt_lwin
 # changing Capslock with Esc
 # setxkbmap -option caps:swapescape
-. "$HOME/.cargo/env"
