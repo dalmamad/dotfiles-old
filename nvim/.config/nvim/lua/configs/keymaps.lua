@@ -45,15 +45,17 @@ keymap("n", "<C-d>", "<C-d>zzzv", opts)
 keymap("n", "<C-u>", "<C-u>zzzv", opts)
 
 -- Turn off Highlight
-keymap("n","<Esc>","<cmd>nohlsearch<CR>", opts)
+keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 
 -- Paste last yank
-keymap("n","<space>p","\"0p==", opts)
-keymap("n","<space>P","\"0P==", opts)
+keymap("n", "<space>p", '"0p==', opts)
+keymap("n", "<space>P", '"0P==', opts)
 
 -- Paste indent
-keymap("n","p","p==", opts)
-keymap("n","P","P==", opts)
+keymap("n", "p", "p==", opts)
+keymap("n", "P", "P==", opts)
+
+keymap("n", "<C-,>", ",", opts)
 
 -- Better indent
 -- keymap("n", ">", ">>", opts)

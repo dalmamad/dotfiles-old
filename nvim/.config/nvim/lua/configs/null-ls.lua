@@ -45,6 +45,7 @@ null_ls.setup({
     formatting.prettier.with({ extra_args = {} }),
     formatting.black.with({ extra_args = { "--fast" } }),
     diagnostics.eslint_d,
+    formatting.clang_format,
     -- formatting.stylua,
     -- diagnostics.flake8,
     -- diagnostics.selene,

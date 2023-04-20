@@ -148,7 +148,6 @@ return packer.startup(function(use)
       require("configs.mason-lspconfig")
     end,
   })
-
   -- Telescope
   use({
     "nvim-telescope/telescope.nvim",
@@ -161,7 +160,7 @@ return packer.startup(function(use)
   -- Treesitter
   use({
     "nvim-treesitter/nvim-treesitter",
-    commit = "4953fdf73ef5ada18e1e969019803605f4f4a4ac",
+    -- commit = "4953fdf73ef5ada18e1e969019803605f4f4a4ac",
     run = function()
       local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
       ts_update()
@@ -222,14 +221,14 @@ return packer.startup(function(use)
     end,
   })
 
-  use({
-    "nvim-neorg/neorg",
-    run = ":Neorg sync-parsers", -- This is the important bit!
-    config = function()
-      require("configs.neorg")
-    end,
-  })
-  use {"nvim-neorg/neorg-telescope"}
+  -- use({
+  --   "nvim-neorg/neorg",
+  --   run = ":Neorg sync-parsers", -- This is the important bit!
+  --   config = function()
+  --     require("configs.neorg")
+  --   end,
+  -- })
+  -- use {"nvim-neorg/neorg-telescope"}
 
   use({
     "epwalsh/obsidian.nvim",
