@@ -1,4 +1,4 @@
 require("plugins")
-require("configs.keymaps")
-require("configs.options")
-require("configs.colorscheme")
+require("keymaps")
+require("options")
+require("colorscheme")
