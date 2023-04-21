@@ -19,7 +19,5 @@ sudo systemctl start redis.service
 sudo systemctl enable docker.service 
 sudo systemctl start docker.service 
 
-# sudo rm -r ~/.config/i3/ ~/.config/lazygit/ ~/.config/rofi/ ~/.bashrc
-# git clone https://github.com/dalmamad/dotfiles.git ~/.dotfiles
-
-stow alacritty i3 lazygit nvim picom polybar ranger rofi xprofile bash mpv
+stow --adopt alacritty i3 lazygit nvim picom polybar ranger rofi xprofile bash mpv
+git restore .
