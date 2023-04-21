@@ -225,12 +225,6 @@ exec --no-startup-id picom
 #mouse speed
 exec --no-startup-id xinput --set-prop 12 'libinput Accel Speed' -0.9
 
-# polybar
-# exec --no-startup-id polybar
-
-# auto layout
-# exec --no-startup-id /home/$USER/.config/i3/scripts/auto-layout/auto-layout
-
 # notify on low battery
 exec --no-startup-id /home/$USER/.config/i3/scripts/i3-battery-popup
 
@@ -246,12 +240,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -e -i /home/$US
 # networkmanager-applet
 exec --no-startup-id nm-applet
 
-# start blueberry app for managing bluetooth devices from tray:
-# exec --no-startup-id blueberry-tray
-
-# clipman-applet
-# exec --no-startup-id xfce4-clipman
-
 # num lock activated
 exec --no-startup-id numlockx on
 
@@ -261,6 +249,17 @@ exec --no-startup-id sleep 1 && feh --bg-fill /home/$USER/.dotfiles/images/ENDY-
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
 
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# exec --no-startup-id dex --autostart --environment i3
+# exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+
+# start blueberry app for managing bluetooth devices from tray:
+# exec --no-startup-id blueberry-tray
+
+# clipman-applet
+# exec --no-startup-id xfce4-clipman
+
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
 
@@ -268,6 +267,11 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 # https://wiki.archlinux.org/title/Session_lock#xautolock
 #exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
 
+# polybar
+# exec --no-startup-id polybar
+
+# auto layout
+# exec --no-startup-id /home/$USER/.config/i3/scripts/auto-layout/auto-layout
 
 # xscreensaver
 # https://www.jwz.org/xscreensaver
