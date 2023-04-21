@@ -40,4 +40,4 @@ these are the tools i'm using for my daily workflow:
 - **Browser:** i use `librewolf` with `vimium` extention
 - **GitTui:** `lazygit`
 - **FileManager:** `thunar` and `ranger`
-- **VideoPlayer:** `mvp`
+- **VideoPlayer:** `mvp` with vim keys
