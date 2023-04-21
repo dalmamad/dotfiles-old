@@ -28,6 +28,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- vertical and Horizontal window
+keymap("n", "<leader>v", "<C-w>v", opts)
+keymap("n", "<leader>h", "<C-w>s", opts)
+
 -- Better resize
 keymap("n", "<CA-k>", ":resize -2<CR>", opts)
 keymap("n", "<CA-j>", ":resize +2<CR>", opts)
