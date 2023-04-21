@@ -297,7 +297,7 @@ for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
 
 # border for all windows
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # safenet
 for_window [class="safenet"] floating Enable
@@ -309,13 +309,13 @@ for_window [class="safenet"] move position center
 
 # Floating terminal
 for_window [title="floaterm"] floating Enabled
-for_window [title="floaterm"] border pixel 4
+for_window [title="floaterm"] border pixel 1
 for_window [title="floaterm"] move scratchpad
 for_window [title="floaterm"] resize set 1200 600
 
 # rest-api terminal
 for_window [title="rest-api"] floating Enabled
-for_window [title="rest"] border pixel 4
+for_window [title="rest"] border pixel 1
 for_window [title="rest-api"] move scratchpad
 # for_window [class="rest-api"] scratchpad show
 for_window [title="rest-api"] resize set 1200 600
