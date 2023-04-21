@@ -1,23 +1,37 @@
 #!/bin/bash
 
-sudo pacman -S git stow neovim xclip picom rofi polybar lazygit ranger alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
-sudo pacman -S redis docker docker-compose
+# installing basics
+sudo pacman -S git stow xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
 yay -S ttf-hack-nerd sct
 
-sudo pacman -S postgresql
-sudo -u postgres initdb -D /var/lib/postgres/data
+#installing file manager
+sudo pacman -S thunar
+sudo pacman -S ranger
 
-sudo pacman -S mpv 
-yay -S librewolf-bin
+#installing editor
+sudo pacman -S neovim
 
-sudo systemctl enable mongodb.service
-sudo systemctl start mongodb.service
-sudo systemctl enable postgresql.service 
-sudo systemctl start postgresql.service 
+# installing databases
+sudo pacman -S redis 
 sudo systemctl enable redis.service 
 sudo systemctl start redis.service 
+
+sudo pacman -S postgresql
+sudo systemctl enable postgresql.service 
+sudo systemctl start postgresql.service 
+sudo -u postgres initdb -D /var/lib/postgres/data
+
+#installing docker
+sudo pacman -S docker docker-compose
 sudo systemctl enable docker.service 
 sudo systemctl start docker.service 
 
+#installing video player
+sudo pacman -S mpv 
+
+#installing browser
+yay -S librewolf-bin
+
+#appling configs with stow
 stow --adopt alacritty i3 lazygit nvim picom polybar ranger rofi xprofile bash mpv
 git restore .

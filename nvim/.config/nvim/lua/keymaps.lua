@@ -77,6 +77,9 @@ keymap("i", "<CA-j>", "<Esc>:resize +2<CR>", opts)
 keymap("i", "<CA-h>", "<Esc>:vertical resize -2<CR>", opts)
 keymap("i", "<CA-l>", "<Esc>:vertical resize +2<CR>", opts)
 
+-- Paste
+keymap("i", "<C-p>", "<C-r>+", opts)
+
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
