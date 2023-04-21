@@ -244,7 +244,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id numlockx on
 
 # set wallpaper
-exec --no-startup-id sleep 1 && feh --bg-fill /home/$USER/.dotfiles/images/ENDY-planet.png
+exec --no-startup-id sleep 1 && feh --bg-fill /home/$USER/.dotfiles/images/wl.jpg 
 
 # set powersavings for display:
 exec --no-startup-id xset 300 dpms 600 600 600
