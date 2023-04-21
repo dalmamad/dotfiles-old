@@ -34,10 +34,6 @@ keymap("n", "<CA-j>", ":resize +2<CR>", opts)
 keymap("n", "<CA-h>", ":vertical resize -2<CR>", opts)
 keymap("n", "<CA-l>", ":vertical resize +2<CR>", opts)
 
--- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==", opts)
-
 -- Center the line
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
