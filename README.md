@@ -41,3 +41,15 @@ these are the tools i'm using for my daily workflow:
 - **GitTui:** `lazygit`
 - **FileManager:** `thunar` and `ranger`
 - **VideoPlayer:** `mvp` with vim keys
+
+# i3wm Keys
+
+## Basic Keys
+
+- Mod+Return : open terminal
+- Mod+n : open nvim
+- Mod+i : open thunar file manager
+- Mod+o : open browser
+- Mod+h | j | k | l : windows navigate
+
+for other key binding you can check `keybinding` section in `dotfile/i3/.config/i3/config` file.
