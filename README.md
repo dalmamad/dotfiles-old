@@ -1,8 +1,8 @@
 # Dotfiles
 
 <p align="center">
-  <img src="./ReadmeAssets/scr1"/>
-  <img src="./ReadmeAssets/scr2"/>
+  <img src="./ReadmeAssets/scr1.png"/>
+  <img src="./ReadmeAssets/scr2.png"/>
 </p>
 
 this is my .dotfile repository. you can download it all or just pick a config you want.
@@ -23,7 +23,7 @@ git clone https://github.com/dalmamad/dotfiles.git
 cd dotfiles
 ```
 
-3. run `install.sh` (make `yay` is installed):
+3. run `install.sh` (make sure `yay` is installed):
 
 ```bash
 ./install.sh
