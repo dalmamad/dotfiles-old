@@ -9,7 +9,7 @@ this is my .dotfile repository. you can download it all or just pick a config yo
 
 # Install
 
-`install.sh` file is written for arch base distros. but you can take a look at it and download necessary packages for your distro
+`install.sh` file is written for arch base distros. but you can take a look at it and download necessary packages for your distro.
 
 1. clone repository:
 
