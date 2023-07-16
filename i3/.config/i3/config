@@ -14,8 +14,8 @@ floating_modifier $mod
 workspace_layout default
 
 # Set inner/outer gaps
-gaps inner 10
-gaps outer 3
+gaps inner 7
+gaps outer 0
 
 ######################################
 #           keybindings              #
@@ -181,7 +181,7 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 ## App shortcuts
 bindsym $mod+o exec --no-startup-id $BROWSER
 bindsym $mod+i exec --no-startup-id /usr/bin/thunar
-bindsym $mod+n exec --no-startup-id alacritty  -o font.size=10 -e $EDITOR
+bindsym $mod+n exec --no-startup-id alacritty  -o font.size=9 -e $EDITOR
 
 # Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)" && notify-send "Capture saved to ~/Pictures"
@@ -235,7 +235,7 @@ exec --no-startup-id xinput set-prop "DLL077C:00 06CB:7E92 Touchpad" "libinput N
 focus_follows_mouse no
 
 # lock after suspend
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -e -i /home/$USER/.dotfiles/images/ENDY-planet.png
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -e -i /home/$USER/.dotfiles/images/wl.png
 
 # networkmanager-applet
 exec --no-startup-id nm-applet
@@ -244,7 +244,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id numlockx on
 
 # set wallpaper
-exec --no-startup-id sleep 1 && feh --bg-fill /home/$USER/.dotfiles/images/wl.jpg 
+exec --no-startup-id sleep 1 && feh --bg-fill /home/$USER/.dotfiles/images/wl.png 
 
 # set powersavings for display:
 exec --no-startup-id xset 300 dpms 600 600 600
@@ -268,7 +268,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
 
 # polybar
-# exec --no-startup-id polybar
+exec --no-startup-id polybar
 
 # auto layout
 # exec --no-startup-id /home/$USER/.config/i3/scripts/auto-layout/auto-layout
@@ -301,7 +301,7 @@ for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
 
 # border for all windows
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 3
 
 # safenet
 for_window [class="safenet"] floating Enable
@@ -318,11 +318,11 @@ for_window [title="floaterm"] move scratchpad
 for_window [title="floaterm"] resize set 1200 600
 
 # rest-api terminal
-for_window [title="rest-api"] floating Enabled
+for_window [title="rest--api"] floating Enabled
 for_window [title="rest"] border pixel 1
-for_window [title="rest-api"] move scratchpad
-# for_window [class="rest-api"] scratchpad show
-for_window [title="rest-api"] resize set 1200 600
+for_window [title="rest--api"] move scratchpad
+# for_window [class="rest--api"] scratchpad show
+for_window [title="rest--api"] resize set 1200 600
 
 
 
@@ -365,25 +365,26 @@ client.urgent  $urgent-bg-color $urgent-bg-color $text-color $grey
 # bar settings (input comes from i3blocks) #
 ############################################
 
-bar {
-
-# font pango: Noto Sans Regular 12
-  font pango: Hack Nerd Font 11
-
-    position top
-
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
-
-    colors {
-      background $black
-#            border 	      bg 		  txt 	indicator
-        focused_workspace  #26ffdb #26ffdb #000000
-        active_workspace   #333333 #333333 #888888
-        inactive_workspace #333333 #333333 #f1f1f1
-        urgent_workspace   #FF5555 #FF5555 #F8F8F2
-        binding_mode       $white	 $white	 $black
-    }
-}
+# bar {
+#
+# # font pango: Noto Sans Regular 12
+#   font pango: Hack Nerd Font 11
+#
+#     position top
+#
+#     # status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#     status_command i3status
+#
+#     colors {
+#       background $black
+# #            border 	      bg 		  txt 	indicator
+#         focused_workspace  #26ffdb #26ffdb #000000
+#         active_workspace   #333333 #333333 #888888
+#         inactive_workspace #333333 #333333 #f1f1f1
+#         urgent_workspace   #FF5555 #FF5555 #F8F8F2
+#         binding_mode       $white	 $white	 $black
+#     }
+# }
 
 
 

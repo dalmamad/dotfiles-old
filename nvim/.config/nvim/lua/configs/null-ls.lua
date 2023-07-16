@@ -42,10 +42,13 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local format = true
 null_ls.setup({
   sources = {
-    formatting.prettier.with({ extra_args = {} }),
+    formatting.prettier.with({ extra_args = {"--no-semi"} }),
     formatting.black.with({ extra_args = { "--fast" } }),
-    diagnostics.eslint_d,
+    -- diagnostics.eslint_d,
     formatting.clang_format,
+    formatting.csharpier,
+    formatting.golines,
+    formatting.rustfmt.with({ extra_args = {}}),
     -- formatting.stylua,
     -- diagnostics.flake8,
     -- diagnostics.selene,

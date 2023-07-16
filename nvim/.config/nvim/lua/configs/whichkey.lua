@@ -100,7 +100,14 @@ local mappings_1 = {
   ["q"] = { "<cmd>q<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["m"] = { "<cmd>MarkdownPreview<CR>", "Markdown Preview" },
-  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["P"] = { "<Plug>RestNvimLast<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["r"] = { "<cmd>RunCode<CR>", "Runner" },
+  R = {
+    name = "Rest",
+    R = {"<cmd> lua require('rest-nvim').run()<cr>","HTTP Request"},
+    P = {"<Plug>RestNvimPreview", "Preview"},
+    L = {"<Plug>RestNvimLast", "Last"},
+  },
   f = {
     name = "Find",
     f = {

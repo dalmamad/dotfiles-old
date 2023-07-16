@@ -45,7 +45,7 @@ require("rest-nvim").setup({
   -- },
 })
 
-local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<leader>rr", "<cmd> lua require('rest-nvim').run()<cr>", opts)
-vim.keymap.set('n', '<leader>rp', '<Plug>RestNvimPreview')
-vim.keymap.set('n', '<leader>rl', '<Plug>RestNvimLast')
+-- local opts = { noremap = true, silent = true }
+-- vim.keymap.set("n", "<leader>rr", "<cmd> lua require('rest-nvim').run()<cr>", opts)
+-- vim.keymap.set('n', '<leader>rp', '<Plug>RestNvimPreview')
+-- vim.keymap.set('n', '<leader>rl', '<Plug>RestNvimLast')

@@ -42,8 +42,8 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
-  use({ "nvim-tree/nvim-web-devicons", commit = "05e1072f63f6c194ac6e867b567e6b437d3d4622" })
   use({ "wbthomason/packer.nvim", commit = "dac4088c70f4337c6c40d1a2751266a324765797" }) -- Have packer manage itself
+  use({ "nvim-tree/nvim-web-devicons", commit = "05e1072f63f6c194ac6e867b567e6b437d3d4622" })
   use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
   use({
     "akinsho/toggleterm.nvim",
@@ -220,6 +220,12 @@ return packer.startup(function(use)
       require("configs.todo-comments")
     end,
   })
+
+  use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim',
+    config = function()
+      require("configs.code-runner")
+    end,
+  }
 
   -- use({
   --   "nvim-neorg/neorg",

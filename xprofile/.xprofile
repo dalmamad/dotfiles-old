@@ -13,5 +13,5 @@ xcape -e 'Control_L=Escape'
 
 
 #env variables
-BROWSER=librewolf
+BROWSER=brave
 EDITOR=nvim
