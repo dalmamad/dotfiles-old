@@ -93,7 +93,7 @@ bindsym $mod+F1 [class="safenet"] scratchpad show; [class="safenet"] move positi
 bindsym $mod+shift+q kill
 
 # lock with a picturek
-bindsym $mod+shift+o exec --no-startup-id i3lock -e -i /home/$USER/.dotfiles/images/ENDY-planet.png
+bindsym $mod+shift+o exec --no-startup-id i3lock -e -i /home/$USER/dotfiles/images/ENDY-planet.png
 # lock by blurring the screen:
 # bindsym $mod+shift+o exec --no-startup-id ~/.config/i3/scripts/blur-lock
 
@@ -235,7 +235,7 @@ exec --no-startup-id xinput set-prop "DLL077C:00 06CB:7E92 Touchpad" "libinput N
 focus_follows_mouse no
 
 # lock after suspend
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -e -i /home/$USER/.dotfiles/images/wl.png
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -e -i /home/$USER/dotfiles/images/wl.png
 
 # networkmanager-applet
 exec --no-startup-id nm-applet
