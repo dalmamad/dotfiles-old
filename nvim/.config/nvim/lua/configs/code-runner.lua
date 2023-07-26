@@ -15,4 +15,3 @@ require('code_runner').setup({
     },
   },
 })
-print('xxx')

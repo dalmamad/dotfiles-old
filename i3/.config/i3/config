@@ -104,8 +104,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +5
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -5
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 # change focus
 bindsym $mod+h focus left
@@ -159,6 +159,9 @@ bindsym $mod+c focus child
 
 # open new empty workspace
 bindsym $mod+Shift+n exec --no-startup-id ~/.config/i3/scripts/empty_workspace
+
+# changing keyboard layout
+bindsym Mod1+space exec --no-startup-id xkb-switch -n
 
 # volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
@@ -221,6 +224,9 @@ set $ws10 "10"
 
 # add picom compositor
 exec --no-startup-id picom
+
+# auto keyboard layout
+exec --no-startup-id xkb-switch --i3
 
 #mouse speed
 exec --no-startup-id xinput --set-prop 12 'libinput Accel Speed' -0.9
