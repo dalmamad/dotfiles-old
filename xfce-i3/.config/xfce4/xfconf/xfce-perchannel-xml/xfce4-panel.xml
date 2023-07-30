@@ -60,6 +60,11 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (81%)"/>
+        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (83%)"/>
+        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (86%)"/>
+        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (77%)"/>
+        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (82%)"/>
         <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (79%)"/>
         <value type="string" value="blueberry-tray.py"/>
         <value type="string" value="networkmanager applet"/>
@@ -67,6 +72,7 @@
         <value type="string" value="ethernet network connection “wired connection 1” active"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="safenet"/>
         <value type="string" value="firewall-applet"/>
       </property>
     </property>

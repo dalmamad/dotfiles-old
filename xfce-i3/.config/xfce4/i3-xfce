@@ -51,16 +51,8 @@ bindsym $mod+Control+j resize grow height 10 px or 10 ppt
 bindsym $mod+Control+k resize shrink height 10 px or 10 ppt
 bindsym $mod+Control+l resize grow width 10 px or 10 ppt
 
-# exit mode
-# mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend" {
-#   bindsym l exec i3-msg exit
-#     bindsym r exec systemctl reboot
-#     bindsym s exec systemctl poweroff
-#     bindsym u exec --no-startup-id systemctl suspend ,mode "default"
-#     bindsym Escape mode "default"
-#     bindsym Return mode "default"
-# }
-# bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend"
+# logout
+bindsym $mod+Shift+e exec --no-startup-id xfce4-session-logout
 
 # exit-menu
 # bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/scripts/powermenu
