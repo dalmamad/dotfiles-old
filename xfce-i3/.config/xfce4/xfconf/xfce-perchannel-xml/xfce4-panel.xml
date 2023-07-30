@@ -6,7 +6,7 @@
     <value type="int" value="1"/>
     <property name="dark-mode" type="bool" value="false"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=8;x=960;y=993"/>
+      <property name="position" type="string" value="p=6;x=960;y=18"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="0"/>
@@ -60,6 +60,8 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (79%)"/>
+        <value type="string" value="blueberry-tray.py"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="firewall-applet"/>
         <value type="string" value="ethernet network connection “wired connection 1” active"/>
