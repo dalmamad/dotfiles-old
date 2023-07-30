@@ -4,22 +4,23 @@
   <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="1"/>
-    <property name="dark-mode" type="bool" value="true"/>
+    <property name="dark-mode" type="bool" value="false"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=6;x=960;y=17"/>
-      <property name="length" type="double" value="100"/>
+      <property name="position" type="string" value="p=8;x=960;y=993"/>
+      <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="0"/>
-      <property name="size" type="uint" value="33"/>
+      <property name="size" type="uint" value="34"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="16"/>
+        <value type="int" value="26"/>
         <value type="int" value="3"/>
-        <value type="int" value="2"/>
-        <value type="int" value="13"/>
         <value type="int" value="7"/>
+        <value type="int" value="23"/>
+        <value type="int" value="25"/>
+        <value type="int" value="24"/>
+        <value type="int" value="2"/>
         <value type="int" value="5"/>
-        <value type="int" value="15"/>
-        <value type="int" value="32"/>
         <value type="int" value="4"/>
         <value type="int" value="6"/>
         <value type="int" value="8"/>
@@ -27,6 +28,7 @@
         <value type="int" value="10"/>
         <value type="int" value="11"/>
         <value type="int" value="12"/>
+        <value type="int" value="13"/>
         <value type="int" value="14"/>
         <value type="int" value="1"/>
       </property>
@@ -37,14 +39,12 @@
         <value type="double" value="0.24313725490196078"/>
         <value type="double" value="0.90035587188612098"/>
       </property>
-      <property name="mode" type="uint" value="0"/>
-      <property name="enter-opacity" type="uint" value="90"/>
-      <property name="leave-opacity" type="uint" value="100"/>
-      <property name="nrows" type="uint" value="1"/>
-      <property name="length-adjust" type="bool" value="true"/>
     </property>
   </property>
   <property name="plugins" type="empty">
+    <property name="plugin-2" type="string" value="tasklist">
+      <property name="grouping" type="uint" value="1"/>
+    </property>
     <property name="plugin-3" type="string" value="separator">
       <property name="expand" type="bool" value="false"/>
       <property name="style" type="uint" value="0"/>
@@ -53,59 +53,31 @@
       <property name="rows" type="uint" value="1"/>
       <property name="wrap-workspaces" type="bool" value="true"/>
     </property>
+    <property name="plugin-5" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
+    </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (58%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (62%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (60%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (82%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (81%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (67%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (76%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (73%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (71%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (72%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (80%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (79%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (74%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (75%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (65%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (78%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (96%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (94%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (100%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (92%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (87%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (90%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (83%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (93%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (91%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (85%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (88%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (89%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (84%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (86%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (77%)"/>
-        <value type="string" value="blueberry-tray.py"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="firewall-applet"/>
         <value type="string" value="ethernet network connection “wired connection 1” active"/>
       </property>
       <property name="known-items" type="array">
-        <value type="string" value="flameshot"/>
-        <value type="string" value="safenet"/>
         <value type="string" value="firewall-applet"/>
       </property>
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="known-players" type="string" value="Brave"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
     <property name="plugin-11" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-13" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-14" type="string" value="actions">
@@ -128,36 +100,31 @@
     </property>
     <property name="plugin-1" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
-      <property name="expand" type="bool" value="false"/>
     </property>
+    <property name="plugin-7" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16712150205.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-23" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16712150326.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-24" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16712150758.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-25" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16712150507.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-26" type="string" value="whiskermenu"/>
     <property name="plugin-16" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-12" type="string" value="datetime"/>
-    <property name="plugin-32" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
-      <property name="style" type="uint" value="0"/>
-    </property>
-    <property name="plugin-2" type="string" value="whiskermenu"/>
-    <property name="plugin-5" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="16906697964.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-7" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="16906697122.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-13" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="16906696951.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-15" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="16906713081.desktop"/>
-      </property>
-    </property>
   </property>
 </channel>
