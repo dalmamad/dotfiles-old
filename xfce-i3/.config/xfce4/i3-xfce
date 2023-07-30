@@ -52,18 +52,18 @@ bindsym $mod+Control+k resize shrink height 10 px or 10 ppt
 bindsym $mod+Control+l resize grow width 10 px or 10 ppt
 
 # exit mode
-mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend" {
-  bindsym l exec i3-msg exit
-    bindsym r exec systemctl reboot
-    bindsym s exec systemctl poweroff
-    bindsym u exec --no-startup-id systemctl suspend ,mode "default"
-    bindsym Escape mode "default"
-    bindsym Return mode "default"
-}
-bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend"
+# mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend" {
+#   bindsym l exec i3-msg exit
+#     bindsym r exec systemctl reboot
+#     bindsym s exec systemctl poweroff
+#     bindsym u exec --no-startup-id systemctl suspend ,mode "default"
+#     bindsym Escape mode "default"
+#     bindsym Return mode "default"
+# }
+# bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown, s[u]spend"
 
 # exit-menu
-bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/scripts/powermenu
+# bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/scripts/powermenu
 
 # change screen temprature
 exec --no-startup-id sct 4500, mode "default"
@@ -229,10 +229,10 @@ exec --no-startup-id picom
 exec --no-startup-id xkb-switch --i3
 
 #mouse speed
-exec --no-startup-id xinput --set-prop 12 'libinput Accel Speed' -0.9
+# exec --no-startup-id xinput --set-prop 12 'libinput Accel Speed' -0.9
 
 # notify on low battery
-exec --no-startup-id /home/$USER/.config/i3/scripts/i3-battery-popup
+# exec --no-startup-id /home/$USER/.config/i3/scripts/i3-battery-popup
 
 # Add Natural Scrolling in Touchpad
 exec --no-startup-id xinput set-prop "DLL077C:00 06CB:7E92 Touchpad" "libinput Natural Scrolling Enabled" 1
@@ -241,23 +241,23 @@ exec --no-startup-id xinput set-prop "DLL077C:00 06CB:7E92 Touchpad" "libinput N
 focus_follows_mouse no
 
 # lock after suspend
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -e -i /home/$USER/dotfiles/images/wl.png
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -e -i /home/$USER/dotfiles/images/wl.png
 
 # networkmanager-applet
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # num lock activated
-exec --no-startup-id numlockx on
+# exec --no-startup-id numlockx on
 
 # set wallpaper
 exec --no-startup-id sleep 1 && feh --bg-fill /home/$USER/dotfiles/images/wl.png 
 
 # set powersavings for display:
-exec --no-startup-id xset 300 dpms 600 600 600
+# exec --no-startup-id xset 300 dpms 600 600 600
 
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+# exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # exec --no-startup-id dex --autostart --environment i3
 
 # start blueberry app for managing bluetooth devices from tray:
@@ -274,7 +274,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 #exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
 
 # polybar
-exec --no-startup-id polybar
+# exec --no-startup-id polybar
 
 # auto layout
 # exec --no-startup-id /home/$USER/.config/i3/scripts/auto-layout/auto-layout

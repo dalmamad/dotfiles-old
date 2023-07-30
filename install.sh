@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # installing basics
-sudo pacman -S git stow xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
+sudo pacman -S git dunst stow xclip picom rofi polybar lazygit alacritty nodejs npm feh maim ripgrep xdotool xcape blueberry flameshot conky xss-lock 
 yay -S ttf-hack-nerd sct xkb-switch-i3
 
 # changing brightness
@@ -37,5 +37,5 @@ sudo pacman -S mpv
 yay -S brave-bin
 
 #appling configs with stow
-stow --adopt alacritty i3 lazygit nvim picom polybar ranger rofi xprofile bash mpv
+stow --adopt alacritty i3 dunst lazygit nvim picom polybar ranger rofi xprofile bash mpv 
 git restore .
