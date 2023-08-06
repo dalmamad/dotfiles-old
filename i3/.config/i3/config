@@ -309,9 +309,6 @@ for_window [window_role="About"] floating enable
 # border for all windows
 for_window [class="^.*"] border pixel 3
 
-# border for xfce_notifications
-for_window [class="xfce4-notifyd"] border prixel 0
-
 # safenet
 for_window [class="safenet"] floating Enable
 for_window [class="safenet"] move scratchpad
