@@ -393,10 +393,9 @@ client.urgent  $urgent-bg-color $urgent-bg-color $text-color $grey
 # }
 
 bar {
-    font pango:DejaVu Sans Mono, FontAwesome 10
+    font pango: Hack Nerd Font 11
     position top
     status_command i3status-rs ~/.config/i3/i3status-rs.toml
-    # status_command i3status
     colors {
         separator #666666
         background #222222

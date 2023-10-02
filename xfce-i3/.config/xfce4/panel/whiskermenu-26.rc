@@ -1,5 +1,5 @@
 favorites=xfce-settings-manager.desktop,xfce4-terminal-emulator.desktop,xfce4-file-manager.desktop,firefox.desktop,org.xfce.Parole.desktop,blueman-manager.desktop,firewall-config.desktop,eos-quickstart.desktop,eos-update-notifier-configure.desktop,eos-apps-info.desktop,eos-log-tool.desktop,reflector-simple.desktop,UpdateInTerminal.desktop,welcome.desktop
-recent=Alacritty.desktop,xfce-session-settings.desktop,xfce-keyboard-settings.desktop,xfce-settings-manager.desktop,reflector-simple.desktop
+recent=xfce-session-settings.desktop,xfce-settings-manager.desktop,SafeNet.desktop,brave-browser.desktop,Alacritty.desktop,xfce-keyboard-settings.desktop,reflector-simple.desktop
 button-title=\ EndeavourOS\ \ 
 button-icon=/usr/share/endeavouros/endeavouros-icon.png
 button-single-row=false

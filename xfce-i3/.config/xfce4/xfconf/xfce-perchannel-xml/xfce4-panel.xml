@@ -6,7 +6,7 @@
     <value type="int" value="1"/>
     <property name="dark-mode" type="bool" value="false"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=5;x=960;y=121"/>
+      <property name="position" type="string" value="p=6;x=960;y=18"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="0"/>
@@ -21,7 +21,6 @@
         <value type="int" value="24"/>
         <value type="int" value="5"/>
         <value type="int" value="4"/>
-        <value type="int" value="6"/>
         <value type="int" value="8"/>
         <value type="int" value="9"/>
         <value type="int" value="10"/>
@@ -38,6 +37,8 @@
         <value type="double" value="0.24313725490196078"/>
         <value type="double" value="0.90035587188612098"/>
       </property>
+      <property name="leave-opacity" type="uint" value="100"/>
+      <property name="enter-opacity" type="uint" value="100"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -52,41 +53,6 @@
     <property name="plugin-5" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="true"/>
-    </property>
-    <property name="plugin-6" type="string" value="systray">
-      <property name="square-icons" type="bool" value="true"/>
-      <property name="known-legacy-items" type="array">
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (90%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (85%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (89%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (88%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (80%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (87%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (74%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (66%)"/>
-        <value type="string" value="wi-fi network connection “sedqnet” active: sedqnet (63%)"/>
-        <value type="string" value="wi-fi network connection “sedqnet” active: sedqnet (62%)"/>
-        <value type="string" value="wi-fi network connection “sedqnet” active: sedqnet (65%)"/>
-        <value type="string" value="wi-fi network connection “sedqnet” active: sedqnet (68%)"/>
-        <value type="string" value="configuring wi-fi network connection “sedqnet”…"/>
-        <value type="string" value="no network connection"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (81%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (83%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (86%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (77%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (82%)"/>
-        <value type="string" value="wi-fi network connection “nokia 6.1 plus” active: nokia 6.1 plus (79%)"/>
-        <value type="string" value="blueberry-tray.py"/>
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="firewall-applet"/>
-        <value type="string" value="ethernet network connection “wired connection 1” active"/>
-      </property>
-      <property name="known-items" type="array">
-        <value type="string" value="vlc"/>
-        <value type="string" value="1"/>
-        <value type="string" value="safenet"/>
-        <value type="string" value="firewall-applet"/>
-      </property>
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
