@@ -2,6 +2,14 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# this is temp and should be remove
+setxkbmap -layout us,ir
+setxkbmap -option "shift:both_capslock_cancel"
+setxkbmap -option altwin:swap_lalt_lwin
+setxkbmap -option ctrl:nocaps
+xcape -e 'Control_L=Escape'
+
+
 # set to vi mode
 set -o vi
 
